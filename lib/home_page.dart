@@ -102,8 +102,17 @@ Widget _buildMovieCarrousel(Movie movie){
           )
           ]
       )    
-      );
+  );
 
+  // body: ListView.builder(
+  //       itemCount: movies.length,
+  //       itemBuilder: (context, index) {
+  //         return Padding(
+  //           padding: const EdgeInsets.all(8.0),
+  //           child: _buildMovieCard(movies[index]),
+  //         );
+  //       },
+  //     ),
 
 Widget _buildMovieCard(Movie movie) {
     return ClipRRect(
