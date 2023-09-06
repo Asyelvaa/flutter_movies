@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/Model/movie_model.dart';
-import 'package:flutter_movies/Screens/detail_page.dart';
-import 'package:flutter_movies/Services/fetch_api.dart';
+import 'package:flutter_movies/models/movie_model/movie_model.dart';
+import 'package:flutter_movies/pages/movie/detail_page/detail_page.dart';
+import 'package:flutter_movies/pages/movie/home_page/home_controller.dart';
+import 'package:flutter_movies/service/fetch_api.dart';
+import 'package:get/get.dart';
 
-class UpcomingMoviesWIdget extends StatelessWidget {
-  const UpcomingMoviesWIdget({super.key, required this.snapshot});
+class UpcomingMoviesWidget extends StatelessWidget {
+   UpcomingMoviesWidget({super.key, required this.snapshot});
+  final HomeController controller = Get.put(HomeController());
   final AsyncSnapshot snapshot;
-
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: Api().getUpcomingMovies(), 
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return Container(
+    return Container(
             height: 200,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -31,12 +29,7 @@ class UpcomingMoviesWIdget extends StatelessWidget {
               },
               ),
           );
-        } else if (snapshot.hasError) {
-          return Center(child: Text('Error'),);
-        } else {
-          return Center(child: CircularProgressIndicator(),);
-        }
-    });
+        
   }
 }
 

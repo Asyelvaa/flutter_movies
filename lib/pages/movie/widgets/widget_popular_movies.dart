@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/Model/movie_model.dart';
-import 'package:flutter_movies/Screens/detail_page.dart';
-import 'package:flutter_movies/Services/fetch_api.dart';
+import 'package:flutter_movies/models/movie_model/movie_model.dart';
+import 'package:flutter_movies/pages/movie/detail_page/detail_page.dart';
+import 'package:flutter_movies/service/fetch_api.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class PopularMoviesWidget extends StatelessWidget {
