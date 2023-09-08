@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/constant/app_constant.dart';
+import 'package:flutter_movies/pages/movie/detail_page/detail_page.dart';
 import 'package:flutter_movies/pages/movie/home_page/home_page.dart';
 import 'package:flutter_movies/pages/movie/search_page/search_page.dart';
-import 'package:flutter_movies/pages/user/register_page/register1_page.dart';
 import 'package:flutter_movies/pages/user/profile_page/profile_page.dart';
 import 'package:flutter_movies/pages/user/register_page/register_page.dart';
 import 'package:get/get.dart';
@@ -23,7 +22,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/registration', page: () => RegisterPage()),
         GetPage(name: '/profilePage', page: () => ProfilePage()),
         GetPage(name: '/searchPage', page:() => SearchPage()),
-        GetPage(name: '/homePage', page: () => HomePage())
+        GetPage(name: '/homePage', page: () => HomePage()),
+        GetPage(name: '/detailMoviePage', page: () => DetailMoviePage())
       ],
     );
   }

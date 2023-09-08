@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/models/movie_model/movie_model.dart';
-import 'package:flutter_movies/pages/movie/detail_page/detail_page.dart';
 import 'package:flutter_movies/service/fetch_api.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:get/get.dart';
 
 class PopularMoviesWidget extends StatelessWidget {
   const PopularMoviesWidget({
@@ -33,9 +33,7 @@ class PopularMoviesWidget extends StatelessWidget {
               final movie = snapshot.data![index];
               return GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => DetailMoviePage(movie:movie)
-                    ));
+                  Get.toNamed('/detailMoviePage', arguments: snapshot.data![index]);
                 },
                 child: MovieCardCarousel(movie: movie),
               );

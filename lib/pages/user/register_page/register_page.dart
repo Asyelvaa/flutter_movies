@@ -6,8 +6,6 @@ import 'package:get/get.dart';
 
 class RegisterPage extends StatelessWidget {
   
-  final controller = PageController(initialPage: 1);
-
   @override
   Widget build(BuildContext context) {
 

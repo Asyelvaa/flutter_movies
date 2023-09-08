@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/models/movie_model/movie_model.dart';
+import 'package:get/get.dart';
 import '../../../service/fetch_api.dart';
 
 class DetailMoviePage extends StatelessWidget {
 
-  const DetailMoviePage({super.key, required this.movie});
-  final Result movie;
+  DetailMoviePage({super.key,});
+  Result movie = Get.arguments;
 
   @override
   Widget build(BuildContext context) {

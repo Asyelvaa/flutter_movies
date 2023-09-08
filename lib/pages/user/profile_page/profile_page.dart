@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_movies/pages/user/profile_page/profile_widget.dart';
 import 'package:flutter_movies/pages/user/register_page/register_controller.dart';
 import 'package:get/get.dart';
 
@@ -35,15 +36,16 @@ class ProfilePage extends StatelessWidget {
                   : Icon(Icons.person, size: 50, color: Colors.black87,)
               );
             }),
+            SizedBox(height:24,),
+            Text('${controller.usernameController!.text}', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             Container(
               padding: EdgeInsets.all(10),
               child: Column(
                 children: [
-                  DataUser('username : ', '${controller.usernameController!.text}'),
-                  DataUser('fullname : ', '${controller.fullnameController!.text}'),
-                  DataUser('email : ', '${controller.emailController!.text}'),
-                  DataUser('phone number : ', '${controller.phoneNumberController!.text}'),
-                  DataUser('address :', '${controller.addressController!.text}'),
+                  DataUser(Icons.person, '${controller.fullnameController!.text}'),
+                  DataUser(Icons.email, '${controller.emailController!.text}'),
+                  DataUser(Icons.phone, '${controller.phoneNumberController!.text}'),
+                  DataUser(Icons.home, '${controller.addressController!.text}'),
                 ],
               ),
             )
@@ -52,21 +54,5 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget DataUser(String title, String dataUser) {
-  return Container(
-    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), 
-    border: Border.all(color: Colors.black54)
-    ),
-    padding: EdgeInsets.all(10),
-    margin: EdgeInsets.only(left: 30, right: 30, top: 10),
-    child: Row(
-      children: [
-        Text(title),
-        Text(dataUser)
-      ],
-    ),
-  );
 }
 

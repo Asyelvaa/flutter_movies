@@ -8,7 +8,6 @@ import '../../../models/movie_model/movie_model.dart';
 import '../../../service/fetch_api.dart';
 
 class HomeController extends GetxController {
-  // Membuat obx untuk daftar film yang akan datang
   var upcomingMovies = <Result>[].obs;
   RxInt currentIndex = 0.obs;
   RxList <Widget> bottomNav = [
@@ -20,7 +19,6 @@ class HomeController extends GetxController {
   @override
   void onInit() {
    super.onInit();
-    // Ambil daftar film yang akan datang ketika controller diinisialisasi
     fetchUpcomingMovies();
     currentIndex.value = 0;
   }

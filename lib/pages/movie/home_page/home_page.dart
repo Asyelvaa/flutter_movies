@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/models/movie_model/movie_model.dart';
 import 'package:flutter_movies/pages/movie/home_page/home_controller.dart';
-import 'package:flutter_movies/pages/movie/widgets/widget_upcoming_movies.dart';
 import 'package:flutter_movies/pages/widget_bottom_navbar.dart';
-import 'package:http/http.dart';
-import '../../../service/fetch_api.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {

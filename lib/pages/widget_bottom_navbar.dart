@@ -22,14 +22,14 @@ class bottomNavigationBar extends StatelessWidget {
         ),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 20),
             child: GNav(
               rippleColor: AppColor.primary,
               hoverColor: Colors.grey[100]!,
               activeColor: Colors.black,
               gap: 8,
               iconSize: 24,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               duration: Duration(milliseconds: 400),
               tabBackgroundColor: const Color.fromRGBO(245, 245, 245, 1)!,
               color: Colors.black,

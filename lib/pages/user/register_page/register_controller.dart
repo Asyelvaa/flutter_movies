@@ -28,7 +28,7 @@ class RegistrationController extends GetxController {
         'Error', 
         'No image Selected',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.red,  
         colorText: Colors.white
       );
     }

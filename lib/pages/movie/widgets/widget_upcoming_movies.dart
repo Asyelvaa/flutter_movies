@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/models/movie_model/movie_model.dart';
-import 'package:flutter_movies/pages/movie/detail_page/detail_page.dart';
 import 'package:flutter_movies/pages/movie/home_page/home_controller.dart';
 import 'package:flutter_movies/service/fetch_api.dart';
 import 'package:get/get.dart';
 
 class UpcomingMoviesWidget extends StatelessWidget {
-   UpcomingMoviesWidget({super.key, required this.snapshot});
+
+  UpcomingMoviesWidget({super.key, required this.snapshot});
   final HomeController controller = Get.put(HomeController());
   final AsyncSnapshot snapshot;
-
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,9 +20,7 @@ class UpcomingMoviesWidget extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => DetailMoviePage(movie: snapshot.data![index])
-                    ));
+                    Get.toNamed('/detailMoviePage', arguments: snapshot.data[index]);
                   },
                   child : MovieListItem(movie: snapshot.data![index])
                 );
